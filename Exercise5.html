@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+        <title>Exercise #5</title>
+        <script>
+            var fullName = "Garth Santor";
+            var obj = {
+                fullName: "Bill Pulling",
+                prop: {
+                    fullName: "Jim Cooper",
+                    getFullName: function () {
+                        return this.fullName;
+                    }
+                }
+            };
+    
+            console.log(obj.prop.getFullName());
+            var test = obj.prop.getFullName;
+            console.log(test());
+    
+            /* Your answer to question 2 below goes underneath the question
+            
+                1. Submit a screen shot of the Chrome debugger console showing the
+                   console.log output.
+    
+                2. Explanation of how the output is generated; i.e.
+                   How does the code work starting from line 17 and finishing with
+                   the completion of line 1?
+                   
+                   ANSWER:
+                   In the line 17 obj.prop.getFullName() calls the function getFullName (line 11) 
+                   and it returns the local/function variable which is “Jim Cooper”.  
+                   In line 18 getFullname does not calls the function it gets the global attribute, 
+                   that is this.fullName = “Garth Santor”.
+    
+            
+            */
+    
+        </script>
+    </head>
+    <body>
+    
+    </body>
+    </html>
+    
